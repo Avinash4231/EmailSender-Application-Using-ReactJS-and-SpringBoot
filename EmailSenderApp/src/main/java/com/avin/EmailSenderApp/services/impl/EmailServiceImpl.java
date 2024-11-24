@@ -35,7 +35,7 @@ public class EmailServiceImpl implements EmailService {
         simpleMailMessage.setTo(to);
         simpleMailMessage.setSubject(subject);
         simpleMailMessage.setText(message);
-        simpleMailMessage.setFrom("avinash20020114@gmail.com");
+        simpleMailMessage.setFrom("xyz@gmail.com");
         mailSender.send(simpleMailMessage);
         logger.info("Email has been sent");
     }
@@ -46,7 +46,7 @@ public class EmailServiceImpl implements EmailService {
         simpleMailMessage.setTo(to);
         simpleMailMessage.setSubject(subject);
         simpleMailMessage.setText(message);
-        simpleMailMessage.setFrom("avinash20020114@gmail.com");
+        simpleMailMessage.setFrom("xyz@gmail.com");
         mailSender.send(simpleMailMessage);
     }
 
@@ -58,7 +58,7 @@ public class EmailServiceImpl implements EmailService {
             helper.setTo(to);
             helper.setText(message);
             helper.setSubject(subject);
-            helper.setFrom("avinash20020114@gmail.com");
+            helper.setFrom("xyz@gmail.com");
             FileSystemResource fileSystemResource=new FileSystemResource(file);
             helper.addAttachment(fileSystemResource.getFilename(), file);
             mailSender.send(mimeMessage);
@@ -77,7 +77,7 @@ public class EmailServiceImpl implements EmailService {
             MimeMessageHelper helper=new MimeMessageHelper(simpleMailMessage,true,"UTF-8");
             helper.setTo(to);
         helper.setSubject(subject);
-        helper.setFrom("avinash20020114@gmail.com");
+        helper.setFrom("xyz@gmail.com");
         helper.setText(htmlContent,true);
         mailSender.send(simpleMailMessage);
         logger.info("Email has been sent");
@@ -95,8 +95,8 @@ public class EmailServiceImpl implements EmailService {
             helper.setTo(to);
             helper.setText(message,true);
             helper.setSubject(subject);
-            // helper.setFrom("avinash20020114@gmail.com");
-            File file = new File("E:\\vs code\\project\\EmailSenderApp\\src\\main\\resources\\static\\images\\email\\test.png");
+            // helper.setFrom("xyz@gmail.com");
+            File file = new File("C:\\test.png");
             Files.copy(ins, file.toPath(),StandardCopyOption.REPLACE_EXISTING);
             FileSystemResource fileSystemResource=new FileSystemResource(file);
             helper.addAttachment(fileSystemResource.getFilename(), file);
